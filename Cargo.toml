@@ -4,17 +4,11 @@ version = "0.1.0"  # 包版本为0.1.0
 edition = "2021"  # 包版行为2021
 
 [dependencies]
-# 依赖tokio异步库，版本为1，使用全部特性
 tokio = { version = "1", features = ["full"] }
-# 依赖json库，版本为1.0.193
-serde = "1.0"
-# 依赖tonic grpc实现，版本为0.5
-tonic = "0.5"
-# 依赖prost proto序列化插件，版本为0.8
-prost = "0.8"
+tonic = "0.10.2"
+tonic-web = { version = "0.10.2" }
+prost = "0.12.3"
 tokio-stream = "0.1.14"
 tower = "0.4.13"
-
 [build-dependencies]
-# 依赖tonic-build proto转rust grpc服务，版本为0.5
-tonic-build = "0.5"
+tonic-build = { version = "0.10.2", features = ["prost"] }
