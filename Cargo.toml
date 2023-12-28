@@ -1,8 +1,13 @@
 [package]
-name = "web"
-version = "0.1.0"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+name = "web"  # 包名称为web
+version = "0.1.0"  # 包版本为0.1.0
+edition = "2021"  # 包版行为2021
 
 [dependencies]
+tokio = { version = "1", features = ["full"] }  # 依赖tokio异步库，版本为1，使用全部特性
+serde = "1.0"  # 依赖json库，版本为1.0.193
+tonic = "0.5"  # 依赖tonic grpc实现，版本为0.5
+prost = "0.8"  # 依赖prost proto序列化插件，版本为0.8
+
+[build-dependencies]
+tonic-build = "0.5"  # 依赖tonic-build proto转rust grpc服务，版本为0.5

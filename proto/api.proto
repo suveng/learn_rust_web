@@ -1,0 +1,10 @@
+syntax = "proto3";
+package api;
+
+import "request.proto";
+import "response.proto";
+
+
+service SearchService {
+  rpc Search(request.SearchRequest) returns (response.SearchResponse);
+}

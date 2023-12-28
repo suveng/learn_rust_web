@@ -1,0 +1,6 @@
+syntax = "proto3";
+package response;
+// 搜索响应消息
+message SearchResponse {
+  string name = 1; // 响应结果的名称
+}

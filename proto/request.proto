@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+package request;
+
+// 搜索请求消息
+message SearchRequest {
+  string name = 1;
+}
