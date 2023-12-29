@@ -10,6 +10,7 @@ use crate::user::user_service::UserApi;
 
 pub mod proto;
 pub mod user;
+pub mod mysql;
 
 #[derive(Debug,Default)]
 pub struct Api {}
