@@ -3,8 +3,15 @@ package api;
 
 import "request.proto";
 import "response.proto";
+import "google/protobuf/empty.proto";
 
-
+// 测试searchService, 实现request的name并且在response返回
 service SearchService {
-  rpc Search(request.SearchRequest) returns (response.SearchResponse);
+  rpc search(request.SearchRequest) returns (response.SearchResponse);
+}
+
+// 用户服务
+service UserService {
+  // 获取在线用户数, 每请求一次,在线用户数加1
+  rpc getOnlineUserNum(google.protobuf.Empty) returns (response.OnlineUserCountResponse);
 }

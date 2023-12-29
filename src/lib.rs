@@ -3,11 +3,15 @@ use tokio::runtime::{Builder, Runtime};
 use tonic::{Request, Response, Status};
 use tonic::transport::Server;
 use crate::proto::api::search_service_server::{SearchService, SearchServiceServer};
+use crate::proto::api::user_service_server::UserServiceServer;
 use crate::proto::request::SearchRequest;
 use crate::proto::response::SearchResponse;
+use crate::user::user_service::UserApi;
 
 pub mod proto;
+pub mod user;
 
+#[derive(Debug,Default)]
 pub struct Api {}
 
 #[tonic::async_trait]
@@ -40,6 +44,8 @@ pub async fn grpc() {
 }
 
 
+
+
 pub async fn grpc_web() {
     // 构建地址
     let socket_address = build_addr();
@@ -51,12 +57,15 @@ pub async fn grpc_web() {
     // 启用 tonic_web
     let api = tonic_web::enable(api);
 
+    // 创建用户服务
+    let user_service = tonic_web::enable(UserServiceServer::new(UserApi {}));
     // 创建 Server 实例
     Server::builder()
         // 允许 HTTP1 连接
         .accept_http1(true)
-        // 添加服务
+        // 添加测试服务
         .add_service(api)
+        .add_service(user_service)
         // 服务监听指定地址
         .serve(socket_address)
         // 异步启动服务器

@@ -10,5 +10,6 @@ tonic-web = { version = "0.10.2" }
 prost = "0.12.3"
 tokio-stream = "0.1.14"
 tower = "0.4.13"
+lazy_static = "1.4.0"
 [build-dependencies]
 tonic-build = { version = "0.10.2", features = ["prost"] }

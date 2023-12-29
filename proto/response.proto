@@ -4,3 +4,7 @@ package response;
 message SearchResponse {
   string name = 1; // 响应结果的名称
 }
+// 在线用户数
+message OnlineUserCountResponse {
+  int32 count = 1; // 在线用户数
+}
