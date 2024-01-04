@@ -1,3 +1,8 @@
 /target
 .idea
 Cargo.lock
+node_modules
+.temp
+.cache
+.DS_Store
+/pnpm-lock.yaml
