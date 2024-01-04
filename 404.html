@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-rc.0">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <title>RustWeb的渐进式教程</title><meta name="description" content="RustWeb的渐进式教程">
+    <link rel="preload" href="/learn_rust_web/assets/style-W7fcsQ4F.css" as="style"><link rel="stylesheet" href="/learn_rust_web/assets/style-W7fcsQ4F.css">
+    <link rel="modulepreload" href="/learn_rust_web/assets/app-tPJb1WTQ.js"><link rel="modulepreload" href="/learn_rust_web/assets/404.html-r6aI8Oiv.js"><link rel="modulepreload" href="/learn_rust_web/assets/404.html-QmlfVgzL.js">
+    <link rel="prefetch" href="/learn_rust_web/assets/index.html-0z9RK2_C.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/resume.html-c11YJw1A.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/1_初始化项目.html-2CYn3IA3.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/2_编写简单的grpc接口.html--FVHx5Pd.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/index.html-kGn_qG_O.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/resume.html-0-H_TPxt.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/1_初始化项目.html-6CtoPGSy.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/2_编写简单的grpc接口.html-5DgxmtTS.js" as="script"><link rel="prefetch" href="/learn_rust_web/assets/giscus-08zh9c_o.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><main class="page"><div class="theme-default-content"><h1>404</h1><blockquote>There&#39;s nothing here.</blockquote><a href="/learn_rust_web/" class="">Take me home</a></div></main></div><!----><!--]--></div>
+    <script type="module" src="/learn_rust_web/assets/app-tPJb1WTQ.js" defer></script>
+  </body>
+</html>
