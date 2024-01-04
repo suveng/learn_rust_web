@@ -1,4 +1,6 @@
 import {defaultTheme, defineUserConfig} from 'vuepress'
+// 我们在这里引入了主题
+import { commentPlugin } from "vuepress-plugin-comment2";
 
 export default defineUserConfig({
     // 将 base 设置为 "/<REPO>/"
@@ -6,6 +8,16 @@ export default defineUserConfig({
     lang: 'zh-CN',
     title: 'RustWeb的渐进式教程',
     description: 'RustWeb的渐进式教程',
+    plugins: [
+        commentPlugin, ({
+            // 插件选项
+            provider: "Giscus", //评论服务提供者。
+            repo: "suveng/learn_rust_web", //远程仓库
+            repoId: "R_kgDOK-uFeg", //对应自己的仓库Id
+            category: "Announcements",
+            categoryId: "DIC_kwDOK-uFes4CcLpE" //对应自己的分类Id
+        }),
+    ],
     theme: defaultTheme({
         // 在这里进行配置
         navbar: [
